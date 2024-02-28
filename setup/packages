@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sudo apt-get install mercurial \
+     geany geany-plugin-projectorganizer \
+     gcc-arm-none-eabi gdb-multiarch \
+     minicom python3-pip
+
+sudo pip3 install pyocd

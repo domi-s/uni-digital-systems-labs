@@ -1,0 +1,33 @@
+#!/bin/bash
+# genproj.in
+# Copyright (c) 2021 J. M. Spivey
+
+# Geany project files have absolute paths embedded within them, and change
+# whenever Geany runs, so they aren't suitable for checking in to version
+# control.  This script generates project files in each lab directory from
+# prototypes that are under version control, substituting locally
+# appropriate values for each @MARKER@ in the prototype.
+
+# $dir is the parent directory of the setup subdirectory in which this
+# script lives.
+dir=$(dirname $(dirname $(realpath $0)))
+
+# $media is the media automounting directory, either /media or /run/media
+if [ -e /run/media ]; then media=/run/media; else media=/media; fi
+
+# For each project, substitute project-specific values for each @MARKER@;
+# then on the "[files]/FILE_NAME" line, encode / as %2F
+project() {
+    proj=$1; name=${proj%%-*}
+    sed -e "s:@DIR@:$dir:" \
+        -e "s:@MEDIA@:$media:" \
+        -e "/^FILE_NAME/s:/:%2F:g" \
+        $dir/setup/$name.geany >$dir/$proj/$name.geany
+}
+
+project lab0-echo
+project lab1-asm
+project lab2-gpio
+project lab3-primes
+project lab4-microbian 
+project hack

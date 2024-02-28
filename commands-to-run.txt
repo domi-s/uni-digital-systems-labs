@@ -1,0 +1,15 @@
+1. Copy the current .s source code file to sub.s
+
+        cp func.s sub.s
+
+2. Assemble/make the source code into a hex file
+
+        make sub.hex
+
+3. Load the resulting file into the micro:bit
+
+        cp sub.hex /run/media/ug23dis/MICROBIT
+
+4. Run the compiled file
+
+        minicom

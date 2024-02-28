@@ -1,0 +1,12 @@
+Tasks done:
+1   adds-subs.s     Try replacing the adds instruction with a different instruction – such and
+                    the subs instruction that subtracts instead of adding. Explain to yourself
+                    why a subtraction such as 2 - 5 seems to give a large positive result when
+                    it is interpreted as an unsigned number.
+2   alu-opps.s      Explore other ALU operations such as the bitwise logical instructions ands
+                    orrs and eors, or the shifts and rotates lsls, lsrs, asrs and rors.
+3   multby10.s      Use shifts and adds to write a function that multiplies one of its
+                    arguments by a small constant, such as 10.                    
+4   fastmult.s      Write a faster software implementation of multiplication, using a log-time
+                    algorithm.
+5   slowdiv.s       Write a simple implementation of unsigned integer division.
