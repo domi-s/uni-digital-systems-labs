@@ -3,5 +3,5 @@
 Contains all the work I did in the Digital Systems course labs.
 
 - Course: Digital Systems
-- Year: 2023 -- 2024 / First (Prelims)
+- Year: 2023 - 2024 / First (Prelims)
 - Term: Hilary
